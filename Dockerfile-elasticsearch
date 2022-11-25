@@ -1,0 +1,5 @@
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.10.1
+# 日本語用のプラグイン
+RUN bin/elasticsearch-plugin install analysis-kuromoji
+# 国際的に規約されてる文字用のプラグイン
+RUN bin/elasticsearch-plugin install analysis-icu
